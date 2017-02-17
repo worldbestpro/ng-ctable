@@ -1,0 +1,125 @@
+<html lang="en" >
+  <head>
+    <!-- Angular Material style sheet -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="https://cdn.gitcdn.xyz/cdn/angular/bower-material/v1.0.1-master-a687bfc/angular-material.css">
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-blue.min.css">
+  </head>
+
+  <style>
+    th:focus,
+    a:focus {
+      outline: none; }
+
+    .codepen-wrap {
+      margin-top: 15px; }
+
+    .mdl-data-table {
+      width: 100%; }
+      .mdl-data-table th {
+        cursor: pointer; }
+
+    .mdl-data-table tr {
+      transition: none !important; }
+
+    th md-select {
+      margin: 0; }
+
+    .md-errors-spacer {
+      display: none; }
+
+    .material-icons, .sortable span:before, .sortable span:after {
+      font-family: 'Material Icons';
+      font-size: 18px;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased; }
+
+    .tName {
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 50px;
+    }
+
+    .centered {
+      cursor: default;
+      text-align: center !important;
+    }
+
+    .head {
+      font-size: 20px;
+    }
+
+    .head-bold {
+      color: blue;
+      font-size: 24px;
+    }
+
+    .tooltip {
+      font-size: 12px;
+    }
+
+    .tooltip-bold {
+      color: blue;
+      font-size: 14px;
+    }
+
+    .txt-normal {
+      font-size: 16px;
+    }
+
+    .txt-italic {
+      color: green;
+      font-size: 16px;
+      font-style: italic;
+    }
+
+    .txt-left {
+      text-align: left !important;
+    }
+
+    .txt-center {
+      text-align: center !important;
+    }
+
+    .txt-right {
+      text-align: right !important;
+    }
+
+    .null-stripe {
+      color: white;
+      display: flex;
+      background: repeating-linear-gradient(
+        45deg,
+        #606dbc,
+        #606dbc 10px,
+        #465298 10px,
+        #465298 20px
+      );
+      width: 100%;
+      height: 80%;
+    }
+  </style>
+
+  <body ng-app="BlankApp" ng-cloak>
+    <!--
+      Your HTML content here
+    -->
+    <div ng-controller="Controller">
+      <my-students data="students"></my-students>
+    </div>
+    
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+    <script src="http://angular-data-grid.github.io/dist/pagination.js"></script>
+    <script src="http://angular-data-grid.github.io/dist/dataGrid.js"></script>
+
+    <!-- Your application bootstrap  -->
+    <script src="scripts.js"></script>
+    
+  </body>
+</html>

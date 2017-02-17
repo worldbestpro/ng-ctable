@@ -1,0 +1,35 @@
+<div layout="column" layout-fill>
+  <md-toolbar layout="row" layout-align="center">
+    <div class="md-toolbar-tools" flex-gt-md="60" flex-md="80" flex-sm="100">
+      <span>Angular Data Grid &mdash; Material Design</span>
+      <span flex></span>
+    </div>
+  </md-toolbar>
+
+  <md-content layout-padding layout="row" layout-align="center">
+    <div flex-gt-md="100" flex-md="100" flex-xs="100">
+      <div>
+        <div ng-repeat="student in students">
+          <span class="tName">{{student.section.heading}}</span>
+          <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+            <thead>
+              <tr>
+                <th class="centered" ng-repeat="column in student.section.data.columns">
+                  <md-tooltip ng-if="isVisible(column.tooltip)"><span class="tooltip">{{getName(column.tooltip)[0]}}</span><span class="tooltip-bold">{{getName(column.tooltip)[1]}}</span><span class="tooltip">{{getName(column.tooltip)[2]}}</span></md-tooltip>
+                  <span class="head">{{getName(column.label)[0]}}</span><span class="head-bold">  {{getName(column.label)[1]}}  </span><span class="head">{{getName(column.label)[2]}}</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr grid-item ng-repeat="result in student.section.data.results">
+                <td ng-class="getCSSAlignment(student, $index)" ng-repeat="item in updateResult(result) track by $index">
+                  <span ng-class="getCSSFontStyle(getValue(item))" ng-bind="getValue(item)"></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </md-content>
+</div>
